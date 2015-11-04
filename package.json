@@ -19,18 +19,16 @@
   "scripts": {
     "lint": "jscs src && eslint src && jshint src"
   },
-  "dependencies": {
-    "eslint": "^1.8.0",
-    "jscs": "^2.5.0",
-    "jshint": "^2.8.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel": "^6.0.15",
     "babel-eslint": "^4.1.4",
     "cz-conventional-changelog": "^1.1.4",
     "eslint": "^1.8.0",
     "eslint-config-airbnb": "^0.1.0",
-    "eslint-path-formatter": "^0.1.1"
+    "eslint-path-formatter": "^0.1.1",
+    "jscs": "^2.5.0",
+    "jshint": "^2.8.0"
   },
   "config": {
     "commitizen": {
