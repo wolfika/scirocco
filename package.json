@@ -19,7 +19,11 @@
   "scripts": {
     "lint": "jscs src && eslint src && jshint src"
   },
-  "dependencies": {},
+  "dependencies": {
+    "eslint": "^1.8.0",
+    "jscs": "^2.5.0",
+    "jshint": "^2.8.0"
+  },
   "devDependencies": {
     "babel": "^6.0.15",
     "babel-eslint": "^4.1.4",
