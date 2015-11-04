@@ -1,0 +1,36 @@
+{
+  "name": "scirocco",
+  "version": "0.0.1",
+  "description": "BitTorrent client written in JavaScript",
+  "author": {
+    "name": "Máté Farkas",
+    "email": "farkas.mate38@gmail.com",
+    "url": "https://github.com/wolfika"
+  },
+  "license": "MIT",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wolfika/scirocco"
+  },
+  "bugs": {
+    "url": "https://github.com/wolfika/scirocco/issues"
+  },
+  "scripts": {
+    "lint": "jscs src && eslint src && jshint src"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "babel": "^6.0.15",
+    "babel-eslint": "^4.1.4",
+    "cz-conventional-changelog": "^1.1.4",
+    "eslint": "^1.8.0",
+    "eslint-config-airbnb": "^0.1.0",
+    "eslint-path-formatter": "^0.1.1"
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  }
+}
