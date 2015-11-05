@@ -17,7 +17,7 @@
     "url": "https://github.com/wolfika/scirocco/issues"
   },
   "scripts": {
-    "lint": "jscs src && eslint src && jshint src"
+    "lint": "jscs app && eslint app && jshint app"
   },
   "dependencies": {},
   "devDependencies": {
