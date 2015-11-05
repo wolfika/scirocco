@@ -1,5 +1,6 @@
-.idea
+.idea/
 *.log
 log
-logs
-node_modules
+logs/
+node_modules/
+build/
