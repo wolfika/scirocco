@@ -4,4 +4,7 @@ node_js:
   - 'stable'
   - '0.12'
 
-script: npm run lint
+before_script:
+  - npm install -g gulp
+
+script: gulp
