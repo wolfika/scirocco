@@ -17,7 +17,8 @@
     "url": "https://github.com/wolfika/scirocco/issues"
   },
   "scripts": {
-    "start": "gulp build && electron build"
+    "start": "gulp build && electron build",
+    "test": "gulp lint"
   },
   "dependencies": {},
   "devDependencies": {
