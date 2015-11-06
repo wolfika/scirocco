@@ -1,0 +1,16 @@
+{
+  "name": "scirocco",
+  "version": "0.0.1",
+  "description": "BitTorrent client written in JavaScript",
+  "authors": [
+    "Máté Farkas <farkas.mate38@gmail.com>"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.4.7",
+    "angular-material": "~0.11.4",
+    "angular-ui-router": "ui-router#~0.2.15",
+    "angular-aria": "~1.4.7"
+  }
+}
