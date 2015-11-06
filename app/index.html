@@ -11,19 +11,30 @@
 
   <body>
 
-    <md-content class="md-padding">
-      <md-card>
-        <md-card-content>
-          <h2 class="md-title">Hello World</h2>
-
-          <p>{{ app.something }}</p>
-        </md-card-content>
-
-        <md-card-footer layout="row" layout-align="end center">
-          <md-button class="md-raised md-primary">Close</md-button>
-        </md-card-footer>
-      </md-card>
-    </md-content>
+    <md-toolbar class="md-tall" layout="row" layout-align="center center">
+      <div class="md-toolbar-tools">
+        <h2>
+          <span>scirocco</span>
+        </h2>
+        <span flex></span>
+        <md-button class="md-icon-button">
+          <md-icon md-font-icon="zmdi zmdi-hc-lg zmdi-hc-fw zmdi-settings"></md-icon>
+        </md-button>
+        <md-menu md-position-mode="target-right target">
+          <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+            <md-icon md-font-icon="zmdi zmdi-hc-lg zmdi-hc-fw zmdi-more-vert"></md-icon>
+          </md-button>
+          <md-menu-content>
+            <md-menu-item>
+              <md-button ng-click="app.quit()">
+                <md-icon md-font-icon="zmdi zmdi-hc-lg zmdi-hc-fw zmdi-close"></md-icon>
+                Exit
+              </md-button>
+            </md-menu-item>
+          </md-menu-content>
+        </md-menu>
+      </div>
+    </md-toolbar>
 
     <!-- bower:js -->
     <!-- endbower -->
