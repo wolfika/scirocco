@@ -1,3 +1,5 @@
+import remote from 'remote';
+
 (() => {
   angular
     .module('scirocco', [
@@ -9,6 +11,8 @@
   function AppCtrl() {
     let _this = this;
 
-    _this.something = 'That\'s something!';
+    _this.quit = function quit() {
+      remote.require('app').quit();
+    };
   }
 })();
