@@ -5,15 +5,31 @@ export function run(gulp, $, config) {
 
   gulp.task('build:html', [
     'build:js',
-    'build:scss'
+    'build:scss',
   ], () => {
-    let buildScripts = gulp.src(config.buildScriptFiles);
-    let buildStyles = gulp.src(config.buildStyleFiles);
+    const cwd = {
+      cwd: config.buildDir,
+    };
+
+    const electronFilesFilter = [
+      '**/*.js',
+      '!**/*.electron.js',
+    ];
+
+    const buildScripts = gulp.src('**/*.js', cwd)
+      .pipe($.filter(electronFilesFilter))
+      .pipe($.angularFilesort());
+
+    const buildStyles = gulp.src('**/*.css', cwd);
+
+    const injectOptions = {
+      addRootSlash: false,
+    };
 
     return gulp.src(config.appMarkupFiles)
       .pipe($.wiredep.stream())
-      .pipe($.inject(buildScripts))
-      .pipe($.inject(buildStyles))
+      .pipe($.inject(buildScripts, injectOptions))
+      .pipe($.inject(buildStyles, injectOptions))
       .pipe(gulp.dest(config.buildDir));
   });
 
@@ -21,6 +37,11 @@ export function run(gulp, $, config) {
     'clean',
   ], () => {
     return gulp.src(config.appScriptFiles)
+      .pipe($.babel({
+        presets: [
+          'es2015',
+        ],
+      }))
       .pipe(gulp.dest(config.buildDir));
   });
 
