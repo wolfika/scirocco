@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html data-ng-app="scirocco" data-ng-controller="AppCtrl as app" data-ng-cloak>
   <head>
     <meta charset="utf-8">
     <title>scirocco</title>
@@ -15,7 +15,13 @@
       <md-card>
         <md-card-content>
           <h2 class="md-title">Hello World</h2>
+
+          <p>{{ app.something }}</p>
         </md-card-content>
+
+        <md-card-footer layout="row" layout-align="end center">
+          <md-button class="md-raised md-primary">Close</md-button>
+        </md-card-footer>
       </md-card>
     </md-content>
 
