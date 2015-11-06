@@ -2,5 +2,6 @@
 *.log
 log
 logs/
+bower_components/
 node_modules/
 build/
