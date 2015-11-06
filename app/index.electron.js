@@ -1,10 +1,10 @@
-'use strict';
+import app from 'app';
+import BrowserWindow from 'browser-window';
+import crashReporter from 'crash-reporter';
 
 let mainWindow = null;
-const BrowserWindow = require('browser-window');
-const app = require('app');
 
-require('crash-reporter').start();
+crashReporter.start();
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
@@ -26,7 +26,7 @@ app.on('ready', () => {
 
   mainWindow.loadUrl('file://' + __dirname + '/index.html');
 
-  //mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   mainWindow.on('closed', () => {
     mainWindow = null;

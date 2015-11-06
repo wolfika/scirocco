@@ -1,4 +1,4 @@
-import _ from 'lodash';
+import lodash from 'lodash';
 import path from 'path';
 
 const configDirs = {
@@ -16,6 +16,6 @@ const configFiles = {
   buildStyleFiles: path.join(configDirs.buildDir, '**/*.css'),
 };
 
-let config = _.merge({}, configDirs, configFiles);
+let config = lodash.merge({}, configDirs, configFiles);
 
 export default config;
