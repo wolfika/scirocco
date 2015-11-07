@@ -18,7 +18,7 @@
         };
 
         _this.openIssues = function openIssues() {
-          shell.openExternal('https://github.com/wolfika/scirocco');
+          shell.openExternal('https://github.com/wolfika/scirocco/issues');
         };
 
         _this.quit = function quit() {
