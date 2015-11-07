@@ -8,6 +8,7 @@ const configDirs = {
 
 const configFiles = {
   appFiles: path.join(configDirs.appDir, '**/*'),
+  appIndexFile: path.join(configDirs.appDir, 'index.html'),
   appMarkupFiles: path.join(configDirs.appDir, '**/*.html'),
   appScriptFiles: path.join(configDirs.appDir, '**/*.js'),
   appStyleFiles: path.join(configDirs.appDir, '**/*.{css,scss}'),
