@@ -11,7 +11,7 @@
       templateUrl: 'sc-navigation/directives/main-menu-directive.tpl.html',
       controllerAs: 'mainMenu',
       controller(app, shell) {
-        var _this = this;
+        const _this = this;
 
         _this.openDocs = function openDocs() {
           shell.openExternal('https://github.com/wolfika/scirocco/wiki');
