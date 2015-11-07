@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "gulp && electron build/index.electron.js",
+    "electron": "electron build/index.electron.js",
     "test": "gulp lint"
   },
   "dependencies": {},
