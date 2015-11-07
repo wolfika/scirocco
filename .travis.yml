@@ -4,6 +4,9 @@ node_js:
   - 'stable'
   - '0.12'
 
+before_install:
+  - bundle install
+
 before_script:
   - npm install -g gulp
 
