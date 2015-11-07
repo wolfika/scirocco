@@ -1,0 +1,9 @@
+.sc-unbuttonify {
+  &,
+  &:active,
+  &:focus,
+  &:hover {
+    box-shadow: none !important;
+    pointer-events: none !important;
+  }
+}
