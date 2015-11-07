@@ -4,7 +4,11 @@ import remote from 'remote';
   angular
     .module('scirocco')
     .constant('remote', remote)
-    .config(setupMaterialTheme);
+    .constant('app', remote.require('app'))
+    .constant('shell', remote.require('shell'))
+    .constant('window', remote.getCurrentWindow())
+    .config(setupMaterialTheme)
+    .config(setupAppMenu);
 
   function setupMaterialTheme($mdThemingProvider) {
     $mdThemingProvider
@@ -17,5 +21,9 @@ import remote from 'remote';
       });
 
     $mdThemingProvider.setDefaultTheme('scirocco');
+  }
+
+  function setupAppMenu(window) {
+    window.setMenu(null);
   }
 })();
