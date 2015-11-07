@@ -1,6 +1,9 @@
+import remote from 'remote';
+
 (() => {
   angular
     .module('scirocco')
+    .constant('remote', remote)
     .config(setupMaterialTheme);
 
   function setupMaterialTheme($mdThemingProvider) {
