@@ -1,4 +1,6 @@
 (() => {
   angular
-    .module('scNavigation', []);
+    .module('scNavigation', [
+      'ui.router',
+    ]);
 })();
