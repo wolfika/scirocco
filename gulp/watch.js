@@ -1,9 +1,9 @@
 export function run(gulp, $, config) {
   gulp.task('watch', [
-    'build'
+    'build',
   ], () => {
     gulp.watch(config.appFiles, [
-      'build'
+      'build',
     ]);
   });
 }
