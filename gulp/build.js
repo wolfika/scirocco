@@ -26,10 +26,23 @@ export function run(gulp, $, config) {
       addRootSlash: false,
     };
 
-    return gulp.src(config.appMarkupFiles)
+    return gulp.src(config.appIndexFile)
       .pipe($.wiredep.stream())
       .pipe($.inject(buildScripts, injectOptions))
       .pipe($.inject(buildStyles, injectOptions))
+      .pipe(gulp.dest(config.buildDir));
+  });
+
+  gulp.task('build:copyTemplates', [
+    'clean',
+  ], () => {
+    const indexFileFilter = [
+      '**/*.html',
+      '!index.html',
+    ];
+
+    return gulp.src(config.appMarkupFiles)
+      .pipe($.filter(indexFileFilter))
       .pipe(gulp.dest(config.buildDir));
   });
 
@@ -60,6 +73,7 @@ export function run(gulp, $, config) {
   gulp.task('build', [
     'clean',
     'build:html',
+    'build:copyTemplates',
     'build:js',
     'build:scss',
   ]);
