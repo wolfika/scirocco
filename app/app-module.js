@@ -5,6 +5,7 @@
       'ngMaterial',
       'ui.router',
       'scNavigation',
+      'scTorrent',
     ]).controller('AppCtrl', AppCtrl);
 
   function AppCtrl() {
