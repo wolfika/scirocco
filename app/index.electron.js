@@ -18,7 +18,7 @@ app.on('ready', () => {
     height: 720,
 
     center: true,
-    frame: false,
+    frame: true,
     resizable: false,
   };
 
