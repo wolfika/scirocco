@@ -19,4 +19,5 @@ for (let key in tasks) {
 gulp.task('default', [
   'lint',
   'build',
+  'watch',
 ]);
