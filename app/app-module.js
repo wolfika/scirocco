@@ -7,11 +7,9 @@
       'scNavigation',
     ]).controller('AppCtrl', AppCtrl);
 
-  function AppCtrl(remote) {
+  function AppCtrl() {
     let _this = this;
 
-    _this.quit = function quit() {
-      remote.require('app').quit();
-    };
+    _this.version = '0.0.1';
   }
 })();
