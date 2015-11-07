@@ -30,7 +30,8 @@ export function run(gulp, $, config) {
       .pipe($.wiredep.stream())
       .pipe($.inject(buildScripts, injectOptions))
       .pipe($.inject(buildStyles, injectOptions))
-      .pipe(gulp.dest(config.buildDir));
+      .pipe(gulp.dest(config.buildDir))
+      .pipe($.livereload());
   });
 
   gulp.task('build:copyTemplates', [
@@ -43,7 +44,8 @@ export function run(gulp, $, config) {
 
     return gulp.src(config.appMarkupFiles)
       .pipe($.filter(indexFileFilter))
-      .pipe(gulp.dest(config.buildDir));
+      .pipe(gulp.dest(config.buildDir))
+      .pipe($.livereload());
   });
 
   gulp.task('build:js', [
@@ -55,7 +57,8 @@ export function run(gulp, $, config) {
           'es2015',
         ],
       }))
-      .pipe(gulp.dest(config.buildDir));
+      .pipe(gulp.dest(config.buildDir))
+      .pipe($.livereload());
   });
 
   gulp.task('build:scss', [
@@ -67,7 +70,8 @@ export function run(gulp, $, config) {
         outputStyle: 'compressed',
       }))
       .pipe($.sourcemaps.write())
-      .pipe(gulp.dest(config.buildDir));
+      .pipe(gulp.dest(config.buildDir))
+      .pipe($.livereload());
   });
 
   gulp.task('build', [
