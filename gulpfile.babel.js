@@ -16,8 +16,16 @@ for (let key in tasks) {
   tasks[key].run(gulp, $, config);
 }
 
-gulp.task('default', [
+gulp.task('ci', [
+  'lint',
+]);
+
+gulp.task('dev', [
   'lint',
   'build',
   'watch',
+]);
+
+gulp.task('default', [
+  'dev',
 ]);
