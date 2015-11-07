@@ -1,0 +1,37 @@
+<md-toolbar class="sc-main-menu md-tall" layout="row" layout-align="center center">
+  <div class="md-toolbar-tools">
+    <h2>
+      <span>scirocco</span>
+    </h2>
+    <span flex></span>
+    <md-button class="md-icon-button">
+      <md-icon md-font-icon="zmdi zmdi-hc-lg zmdi-hc-fw zmdi-settings"></md-icon>
+    </md-button>
+    <md-menu md-position-mode="target-right target">
+      <md-button class="md-icon-button" ng-click="$mdOpenMenu($event)">
+        <md-icon md-font-icon="zmdi zmdi-hc-lg zmdi-hc-fw zmdi-more-vert"></md-icon>
+      </md-button>
+      <md-menu-content>
+        <md-menu-item>
+          <md-button ng-click="mainMenu.openDocs()">
+            <md-icon md-font-icon="zmdi zmdi-hc-lg zmdi-hc-fw zmdi-book"></md-icon>
+            Documentation
+          </md-button>
+        </md-menu-item>
+        <md-menu-item>
+          <md-button ng-click="mainMenu.openIssues()">
+            <md-icon md-font-icon="zmdi zmdi-hc-lg zmdi-hc-fw zmdi-bug"></md-icon>
+            Report a bug
+          </md-button>
+        </md-menu-item>
+        <md-menu-divider></md-menu-divider>
+        <md-menu-item>
+          <md-button ng-click="mainMenu.quit()">
+            <md-icon md-font-icon="zmdi zmdi-hc-lg zmdi-hc-fw zmdi-power"></md-icon>
+            Exit scirocco
+          </md-button>
+        </md-menu-item>
+      </md-menu-content>
+    </md-menu>
+  </div>
+</md-toolbar>
