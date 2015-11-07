@@ -3,7 +3,9 @@
   &:active,
   &:focus,
   &:hover {
+    // scss-lint:disable all
     box-shadow: none !important;
     pointer-events: none !important;
+    // scss-lint:enable all
   }
 }
