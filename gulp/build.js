@@ -13,7 +13,7 @@ export function run(gulp, $, config) {
 
     const electronFilesFilter = [
       '**/*.js',
-      '!**/*.electron.js',
+      '!lib/**/*.js',
     ];
 
     const buildScripts = gulp.src('**/*.js', cwd)
