@@ -1,4 +1,5 @@
 (() => {
+
   angular
     .module('scirocco', [
       'ngAria',
@@ -13,4 +14,5 @@
 
     _this.version = '0.0.1';
   }
+
 })();
