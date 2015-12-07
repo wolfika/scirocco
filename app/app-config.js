@@ -1,6 +1,7 @@
 import remote from 'remote';
 
 (() => {
+
   angular
     .module('scirocco')
     .constant('remote', remote)
@@ -26,4 +27,5 @@ import remote from 'remote';
   function setupAppMenu(window) {
     window.setMenu(null);
   }
+
 })();
