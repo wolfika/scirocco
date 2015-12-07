@@ -1,8 +1,11 @@
+import path from 'path';
+
 import app from 'app';
 import BrowserWindow from 'browser-window';
 import crashReporter from 'crash-reporter';
 
 let mainWindow = null;
+const mainFile = path.join('file://', __dirname, '..', 'index.html');
 
 crashReporter.start();
 
@@ -24,7 +27,7 @@ app.on('ready', () => {
 
   mainWindow = new BrowserWindow(windowOptions);
 
-  mainWindow.loadUrl('file://' + __dirname + '/index.html');
+  mainWindow.loadUrl(mainFile);
 
   mainWindow.webContents.openDevTools();
 
