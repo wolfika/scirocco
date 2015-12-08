@@ -23,6 +23,7 @@ gulp.task('ci', [
 gulp.task('dev', [
   'lint',
   'build',
+  'bootstrap',
   'watch',
 ]);
 
