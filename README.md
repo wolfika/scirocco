@@ -7,7 +7,7 @@
 
 ## Usage
 1. Clone this git repo.
-2. `$ npm install && bower install && gulp`
+2. `$ npm install && bower install && npm run start`
 3. ???
 4. Profit!
 
