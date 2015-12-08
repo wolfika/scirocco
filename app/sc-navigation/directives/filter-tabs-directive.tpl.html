@@ -1,11 +1,13 @@
 <md-tabs md-border-bottom>
-  <md-tab ui-sref="torrents">All</md-tab>
+  <md-tab ui-sref="torrents({ filter: 'all' })">All</md-tab>
 
   <md-tab ui-sref="torrents({ filter: 'active' })">Active</md-tab>
 
   <md-tab ui-sref="torrents({ filter: 'downloading' })">Downloading</md-tab>
 
   <md-tab ui-sref="torrents({ filter: 'seeding' })">Seeding</md-tab>
+
+  <md-tab ui-sref="torrents({ filter: 'paused' })">Paused</md-tab>
 
   <md-tab ui-sref="torrents({ filter: 'finished' })">Finished</md-tab>
 </md-tabs>
