@@ -1,0 +1,15 @@
+<md-list class="sc-torrents" layout="column">
+  <md-list-item class="md-3-line sc-torrent" ng-repeat="torrent in torrents.torrents" layout="row" layout-align="space-between center">
+    <div flex="10" layout="column" layout-align="center center">
+      <md-button class="md-avatar md-icon-button md-raised md-primary sc-unbuttonify">
+        <md-icon md-font-icon="zmdi zmdi-hc-lg zmdi-hc-fw zmdi-download"></md-icon>
+      </md-button>
+    </div>
+
+    <div class="md-list-item-text flex" layout="column" layout-align="space-between start">
+      <h3 class="sc-torrent-name">{{torrent.name}}</h3>
+      <h4 class="sc-torrent-status">{{torrent | torrentStatus}} ({{torrent.progress}}%)</h4>
+      <md-progress-linear md-mode="determinate" value="{{torrent.progress}}"></md-progress-linear>
+    </div>
+  </md-list-item>
+</md-list>

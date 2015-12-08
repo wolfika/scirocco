@@ -1,0 +1,21 @@
+@import '../../common/variables';
+
+#{$theme}.sc-torrents {
+  .sc-torrent {
+    margin-bottom: 16px;
+
+    .md-list-item-text {
+      margin-left: 8px;
+      margin-top: 0;
+    }
+
+    .sc-torrent-status {
+      color: $color-grey-500;
+      font-weight: $font-weight-medium;
+      letter-spacing: $letter-spacing-spacious;
+      margin: 8px 0;
+      text-transform: uppercase;
+    }
+  }
+
+}
