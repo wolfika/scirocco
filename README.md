@@ -1,4 +1,4 @@
-[![scirocco](https://raw.githubusercontent.com/wolfika/scirocco/master/resources/v1.png)](https://github.com/wolfika/scirocco)
+[![scirocco](https://raw.githubusercontent.com/wolfika/scirocco/master/resources/logo_small.png)](https://github.com/wolfika/scirocco)
 
 [![Build Status](https://travis-ci.org/wolfika/scirocco.svg)](https://travis-ci.org/wolfika/scirocco)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
