@@ -24,7 +24,7 @@ gulp.task('dev', [
   'lint',
   'build',
   'bootstrap',
-  'watch',
+  //'watch',
 ]);
 
 gulp.task('default', [
